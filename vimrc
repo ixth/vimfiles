@@ -14,7 +14,6 @@ vnoremap > ><CR>gv
 vnoremap < <<CR>gv
 
 execute pathogen#infect()
-let g:pathogen_disabled = ['supertab']
 syntax on
 filetype plugin indent on
 colors zenburn
