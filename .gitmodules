@@ -13,3 +13,6 @@
 [submodule "bundle/vim-snipmate"]
 	path = bundle/vim-snipmate
 	url = git://github.com/msanders/snipmate.vim.git
+[submodule "bundle/vim-yate"]
+	path = bundle/vim-yate
+	url = git@github.com:maksimr/vim-yate.git

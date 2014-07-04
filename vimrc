@@ -18,3 +18,6 @@ syntax on
 filetype plugin indent on
 colors zenburn
 
+au BufNewFile,BufRead *.yate set syntax=yate
+au BufNewFile,BufRead *.jsx set syntax=javascript
+au BufNewFile,BufRead *.json set syntax=javascript
