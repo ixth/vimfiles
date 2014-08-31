@@ -39,10 +39,12 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-set undofile
-set undodir=$HOME/.vim/undo
-set undolevels=1000
-set undoreload=10000
+if version >= 730
+    set undofile
+    set undodir=$HOME/.vim/undo
+    set undolevels=1000
+    set undoreload=10000
+endif
 
 vnoremap > ><CR>gv
 vnoremap < <<CR>gv
