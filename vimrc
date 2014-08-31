@@ -5,11 +5,14 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-
-Plugin 'jnurmine/Zenburn'
-Plugin 'vim-scripts/JavaScript-syntax'
 Plugin 'tpope/vim-sensible'
+Plugin 'jnurmine/Zenburn'
+Plugin 'scrooloose/nerdtree'
+
+Plugin 'mattn/emmet-vim'
 Plugin 'msanders/snipmate.vim'
+
+Plugin 'vim-scripts/JavaScript-syntax'
 Plugin 'maksimr/vim-yate'
 
 call vundle#end()            " required
@@ -43,6 +46,11 @@ set undoreload=10000
 
 vnoremap > ><CR>gv
 vnoremap < <<CR>gv
+
+map <c-k><c-b> :NERDTreeToggle<CR>
+map <c-k><c-t> :tabe
+map <c-k><c-]> :tabp
+map <c-k><c-[> :tabn
 
 syntax on
 filetype plugin indent on
