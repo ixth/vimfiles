@@ -8,12 +8,11 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-sensible'
 Plugin 'jnurmine/Zenburn'
 Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
 
 Plugin 'mattn/emmet-vim'
 Plugin 'msanders/snipmate.vim'
-
 Plugin 'vim-scripts/JavaScript-syntax'
-Plugin 'maksimr/vim-yate'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -29,6 +28,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+set enc=utf-8
 set t_Co=256
 set number
 set wildmenu
@@ -58,6 +58,4 @@ syntax on
 filetype plugin indent on
 colors zenburn
 
-au BufNewFile,BufRead *.yate set syntax=yate
-au BufNewFile,BufRead *.jsx set syntax=javascript
 au BufNewFile,BufRead *.json set syntax=javascript
