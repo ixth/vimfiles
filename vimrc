@@ -5,13 +5,18 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
+
 Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-fugitive'
+
 Plugin 'jnurmine/Zenburn'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 
 Plugin 'mattn/emmet-vim'
+Plugin 'tpope/vim-surround'
 Plugin 'msanders/snipmate.vim'
+
 Plugin 'vim-scripts/JavaScript-syntax'
 
 call vundle#end()            " required
