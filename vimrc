@@ -11,7 +11,13 @@ Plugin 'tpope/vim-fugitive'
 
 Plugin 'jnurmine/Zenburn'
 Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'Shougo/unite.vim'
+Plugin 'yuku-t/unite-git'
+
+Plugin 'craigemery/vim-autotag'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'tsukkee/unite-tag'
 
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-surround'
@@ -37,7 +43,7 @@ set enc=utf-8
 set t_Co=256
 set number
 set wildmenu
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:⇥\ ,eol:¬
 set list
 
 set tabstop=4
@@ -51,13 +57,24 @@ if version >= 730
     set undoreload=10000
 endif
 
+" Unite
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+call unite#custom#source('file_rec', 'ignore_pattern', 'node_modules\/')
+call unite#custom#source('file_rec\/async', 'ignore_pattern', 'node_modules\/')
+
+map <c-k><c-u> :Unite<CR>
+"map <c-p> :Unite file_rec/async<CR>
+nnoremap <c-p> :Unite -start-insert file_rec<CR>
+"map <c-k><c-t> :Unite tag:<c-r>=expand("<cword>")<CR><CR>
+
+
 vnoremap > ><CR>gv
 vnoremap < <<CR>gv
 
-map <c-k><c-b> :NERDTreeToggle<CR>
-map <c-k><c-t> :tabe
-map <c-k><c-]> :tabp
-map <c-k><c-[> :tabn
+map <c-k><c-n> :NERDTreeToggle<CR>
+map <c-k><c-f> :NERDTreeFind<CR>
+
+map <c-k><c-t> :Tlist<CR>
 
 syntax on
 filetype plugin indent on
